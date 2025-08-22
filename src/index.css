@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black-gradient: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #72160d 0%, #de7469 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(90deg, #de7469 0%, #72160d 100%);
+}
+
+.bg-blue-gradient-2 {
+  background: linear-gradient(90deg, #2e77ce 0%, #092f5d 100%);
+}
+
+.bg-black-gradient {
+  background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
+}
+
+.bg-black-gradient-2 {
+  background: linear-gradient(-168.39deg, #ffffff -278.56%, #092f5d 91.61%);
+}
+
+.bg-gray-gradient {
+  background: linear-gradient(153.47deg, rgba(255, 255, 255, 0) -341.94%, #14101d 95.11%);
+}
+
+.bg-discount-gradient {
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+}
+
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  background: none;
+  box-shadow: none;
+  transition: box-shadow 0.25s ease-in-out; /* lebih cepat */
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-168.39deg, #ffffff -278.56%, #72160d 91.61%);
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out; /* fade lebih cepat */
+  z-index: 0;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-card:hover {
+  box-shadow: var(--card-shadow);
+}
+
+.feature-card:hover .feature-card-text {
+  color: #ffffff; /* warna teks baru */
+}
+
+.feedback-container .feedback-card:last-child {
+  margin-right: 0px;
+}
+
+.feedback-card {
+  position: relative;
+  overflow: hidden;
+  background: transparent; /* default */
+  box-shadow: none;
+  transition: box-shadow 0.25s ease-in-out; /* shadow fade cepat */
+}
+
+.feedback-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-168.39deg, #ffffff -278.56%, #72160d 91.61%);
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out; /* gradient fade cepat */
+  z-index: 0;
+}
+
+.feedback-card:hover::before {
+  opacity: 1;
+}
+
+.feedback-card > * {
+  position: relative;
+  z-index: 1; /* supaya konten tetap di atas overlay */
+}
+
+.feedback-card:hover {
+  box-shadow: var(--card-shadow);
+}
+
+/* ubah teks di dalam card ketika hover */
+.feedback-card:hover .feedback-text {
+  color: #ffffff; /* warna teks baru */
+}
+
+.getstarted-card:hover {
+  background: linear-gradient(90deg, #2e77ce 0%, #092f5d 100%);
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
